@@ -36,12 +36,12 @@ tab1, tab2, tab3 = st.tabs(["Stacjonarne źródła spalania", "Flota", "Pojazdy 
 
 with tab1:
    st.header("A cat")
-   expander = st.expander("See explanation")
-    expander.write(\"\"\"
+expander = st.expander("See explanation")
+expander.write(\"\"\"
     The chart above shows some numbers I picked for you.
     I rolled actual dice for these, so they're *guaranteed* to
     be random.
-    \"\"\")
+\"\"\")
     
    option = st.selectbox(
     'Wybierz typ wykorzystywanego paliwa',
