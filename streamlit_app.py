@@ -13,10 +13,8 @@ def main():
             page.item("Podstawowe informacje", moja_firma.gallery, default=True)
 
         with st.expander("ANALITYKA", True):
-            page.item("Zakres 1", analityka.ace_editor)
-            page.item("Zakres 2", analityka.disqus)
-            page.item("Zalres 3", analityka.elements)
-            page.item("Podsumowanie", analityka.pandas_profiling)
+            page.item("Zakres 1", analityka.zakres1)
+            page.item("Zakres 2", analityka.zakres2)
     page.show()
 
 if __name__ == "__main__":
