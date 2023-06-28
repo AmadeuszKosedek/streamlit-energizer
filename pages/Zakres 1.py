@@ -20,10 +20,22 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 
-tab1, tab2, tab3 = st.tabs(["Stacjonarne źródła spalania", "Flota", "Pojazdy niedrogowe"])
+tab1, tab2, tab3 = st.tabs(["Stacjonarne źródła spalania", "Flota", "Pojazdy niedrogowe", "Inne gazy"])
 
 with tab1:
    st.header("A cat")
+   with st.expander("See explanation"):
+    st.write(\"\"\"
+        The chart above shows some numbers I picked for you.
+        I rolled actual dice for these, so they're *guaranteed* to
+        be random.
+    \"\"\")
+    st.image("https://static.streamlit.io/examples/dice.jpg")
+   option = st.selectbox(
+    'Wybierz typ wykorzystywanego paliwa',
+    ('Koks', 'Uran', 'Polon'))
+
+st.write('You selected:', option)
    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
 
 with tab2:
