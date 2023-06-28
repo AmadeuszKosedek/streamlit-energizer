@@ -41,7 +41,6 @@ def main():
 
         w.editor.add_tab("Card content", Card.DEFAULT_CONTENT, "plaintext")
         w.editor.add_tab("Data grid", json.dumps(DataGrid.DEFAULT_ROWS, indent=2), "json")
-        w.editor.add_tab("Radar chart", json.dumps(Radar.DEFAULT_DATA, indent=2), "json")
         w.editor.add_tab("Pie chart", json.dumps(Pie.DEFAULT_DATA, indent=2), "json")
     else:
         w = state.w
