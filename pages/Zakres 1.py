@@ -2,6 +2,18 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Stacjonarne źródła spalania': 'https://www.extremelycoolapp.com/help',
+        'Flota': "https://www.extremelycoolapp.com/bug",
+        'Pojazdy niedrogowe': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 uploaded_file = st.file_uploader("Wgraj plik z danymi", type=['xls','xlsx','csv'])
 if uploaded_file is not None:
     # To read file as bytes:
@@ -24,13 +36,13 @@ tab1, tab2, tab3 = st.tabs(["Stacjonarne źródła spalania", "Flota", "Pojazdy 
 
 with tab1:
    st.header("A cat")
-   with st.expander("See explanation"):
-    st.write(\"\"\"
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+   expander = st.expander("See explanation")
+    expander.write(\"\"\"
+    The chart above shows some numbers I picked for you.
+    I rolled actual dice for these, so they're *guaranteed* to
+    be random.
     \"\"\")
-    st.image("https://static.streamlit.io/examples/dice.jpg")
+    
    option = st.selectbox(
     'Wybierz typ wykorzystywanego paliwa',
     ('Koks', 'Uran', 'Polon'))
