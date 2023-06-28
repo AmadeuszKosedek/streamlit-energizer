@@ -26,8 +26,6 @@ def main():
         """
     )
 
-    with st.expander("GETTING STARTED"):
-        st.write((Path(__file__).parent/"README.md").read_text())
 
     st.title("")
 
